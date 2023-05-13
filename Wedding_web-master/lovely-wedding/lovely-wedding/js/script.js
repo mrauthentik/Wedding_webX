@@ -534,6 +534,20 @@
         });
     }
 
+    // // email script
+    // function sendEmail(){
+    //     Email.send({
+    //     Host : "smtp.gmail.com",
+    //     Username : "adazoqueendummy@gmail.com",
+    //     Password : "adazoqueendummy1234",
+    //     To : 'adazoqueendummy@gmail.com',
+    //     From : document.getElementById('email').value,
+    //     Subject : "This is the subject",
+    //     Body : "And this is the body"
+    // }).then(
+    //   message => alert(message)
+    // );
+    // }
 
     /*------------------------------------------
         = RSVP FORM SUBMISSION
@@ -564,30 +578,30 @@
                 events: "Select your event list"
             },
 
-            submitHandler: function (form) {
-                $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
+            // submitHandler: function (form) {
+            //     $("#loader").css("display", "inline-block");
+            //     $.ajax({
+            //         type: "POST",
+            //         url: "mail.php",
+            //         data: $(form).serialize(),
+            //         success: function () {
+            //             $( "#loader").hide();
+            //             $( "#success").slideDown( "slow" );
+            //             setTimeout(function() {
+            //             $( "#success").slideUp( "slow" );
+            //             }, 3000);
+            //             form.reset();
+            //         },
+            //         error: function() {
+            //             $( "#loader").hide();
+            //             $( "#error").slideDown( "slow" );
+            //             setTimeout(function() {
+            //             $( "#error").slideUp( "slow" );
+            //             }, 3000);
+            //         }
+            //     });
+            //     return false; // required to block normal submit since you used ajax
+            // }
 
         });
     }
